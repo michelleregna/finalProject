@@ -54,6 +54,7 @@ class accountsController extends http\controller
     //this is the function to save the user the user profile
     public static function store()
     {
+        //$record = accounts::findOne($_REQUEST['id']);
         print_r($_POST);
 
     }
