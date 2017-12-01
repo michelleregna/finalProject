@@ -101,6 +101,7 @@ class routes
         $route->page = 'tasks';
         $route->controller = 'tasksController';
         $route->method = 'create';
+        $routes[] = $route;
 
         // CREATE - STORES THE TASK
         $route = new route();
@@ -109,6 +110,7 @@ class routes
         $route->page = 'tasks';
         $route->controller = 'tasksController';
         $route->method = 'store';
+        $routes[] = $route;
 
         /////////// ACCOUNTS ROUTES //////////
 

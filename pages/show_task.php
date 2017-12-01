@@ -27,7 +27,7 @@ print_r($data);
 </form>
 
 <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?> " method="get" id="form2">
-    <button type="button" form="form2" value="edit">Edit</button>
+    <button type="submit" form="form2" value="edit">Edit</button>
 </form>
 
 
