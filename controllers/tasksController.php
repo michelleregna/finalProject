@@ -41,7 +41,7 @@ class tasksController extends http\controller
     public static function edit()
     {
         echo "hello";
-        // $record = todos::findOne($_REQUEST['id']);
+        $record = todos::findOne($_REQUEST['id']);
         header('Location: index.php?page=tasks&action=edit&id=' . $_REQUEST['id']);
 
         // self::getTemplate('edit_task', $record);

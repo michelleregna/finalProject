@@ -17,7 +17,7 @@
 
 <body>
 
- <form action="add_task.php" method="post">
+ <form action="index.php?page=tasks&action=create" method="get">
                 <table>
                     <tr>
                         <th><label for="owneremail">Owner Email</label></th>
@@ -44,7 +44,8 @@
                         <td><input type="text" id="isdone" name="isdone" value="" /></td>    
                     </tr>
                 </table>
-                <input class="button button--primary button--topic-php" type="submit" value="Submit" />
+               
+                <input type="submit" value="Submit" />
 </form>
 
 <?php
