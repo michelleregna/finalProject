@@ -33,6 +33,7 @@ class tasksController extends http\controller
 
     public static function create()
     {
+        self::getTemplate('add_task');
         print_r($_POST);
     }
 
