@@ -33,8 +33,11 @@ class tasksController extends http\controller
 
     public static function create()
     {
-        self::getTemplate('add_task');
-        print_r($_POST);
+        echo 'hello';
+        $records = todos::findAll();
+        // header('Location: https://web.njit.edu/~mcr35/mvc/pages/add_task.php');
+        // self::getTemplate('add_task');
+        // print_r($_POST);
     }
 
     //this is the function to view edit record form

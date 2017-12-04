@@ -27,6 +27,7 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 <form action="index.php?page=tasks&action=create" method="get">
     <button type="submit" value="Add task">Add Task</button>
 </form>
+
 <!-- <a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>'
  -->
 

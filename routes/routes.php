@@ -95,6 +95,7 @@ class routes
         $routes[] = $route;
 
         // CREATE - SHOWS THE FORM
+        //index.php?page=tasks&action=create
         $route = new route();
         $route->http_method = 'GET';
         $route->action = 'create';
