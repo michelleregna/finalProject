@@ -33,10 +33,8 @@ class tasksController extends http\controller
 
     public static function create()
     {
-        echo 'hello';
-        $records = todos::findAll();
         // header('Location: https://web.njit.edu/~mcr35/mvc/pages/add_task.php');
-        // self::getTemplate('add_task');
+        self::getTemplate('add_task');
         // print_r($_POST);
     }
 
@@ -54,10 +52,11 @@ class tasksController extends http\controller
     //this would be for the post for sending the task edit form
     public static function store()
     {
-        $record = todos::findOne($_REQUEST['id']);
-        $record->body = $_REQUEST['body'];
-        $record->save();
-        print_r($_POST);
+        echo "you are in the store function";
+        // $record = todos::findOne($_REQUEST['id']);
+        // $record->body = $_REQUEST['body'];
+        // $record->save();
+        // print_r($_POST);
 
     }
 

@@ -17,7 +17,7 @@
 
 <body>
 
- <form action="index.php?page=tasks&action=create" method="get">
+ <form action="index.php?page=tasks&action=create" method="post">
                 <table>
                     <tr>
                         <th><label for="owneremail">Owner Email</label></th>
@@ -48,12 +48,12 @@
                 <input type="submit" value="Submit" />
 </form>
 
-<?php
+<!-- <?php
 //this is how you print something
 
-print utility\htmlTable::genarateTableFromMultiArray($data);
+// print utility\htmlTable::genarateTableFromMultiArray($data);
 
-?>
+?> -->
 
 <!-- <form action="index.php?page=tasks&action=create" method="get">
     <button type="submit" value="Add task">Add Task</button>
