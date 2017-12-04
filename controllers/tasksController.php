@@ -33,7 +33,6 @@ class tasksController extends http\controller
 
     public static function create()
     {
-        // header('Location: https://web.njit.edu/~mcr35/mvc/pages/add_task.php');
         self::getTemplate('add_task');
         // print_r($_POST);
     }
