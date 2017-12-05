@@ -1,18 +1,10 @@
-<!-- 
-
-put a page with in a form to edit a task and have a delete button in another form to delete
-
-<form action="index.php?page=tasks&action=delete&id=<?php $data['id'] ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete">Delete</button>
-</form> -->
-
 <!doctype html>
 
 <html lang="en">
 <head>
     <meta charset="utf-8">
 
-    <title>Edit</title>
+    <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
@@ -31,12 +23,7 @@ put a page with in a form to edit a task and have a delete button in another for
 print_r($data);
 ?>
 
-<form action="index.php?page=tasks&action=edit&id=<?php echo $data->id ?> " method="get" id="form2">
-    <button type="button" form="form2" value="edit">Edit</button>
-</form>
-
-<h1> hi there i'm in the form </h1>;
-
+<h1>you are in the edit_task.php template</h1>
 
 
 

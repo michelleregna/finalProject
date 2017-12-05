@@ -37,8 +37,6 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
     <input type="submit" value="Add task">
 </form>
 
-<!-- <a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>'
- -->
 
 <script src="js/scripts.js"></script>
 </body>
