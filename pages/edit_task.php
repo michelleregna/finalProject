@@ -17,13 +17,38 @@
 
 <body>
 
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
+<h1> Edit record <?php echo $data->id?> </h1>
 
-print_r($data);
-?>
-
-<h1>you are in the edit_task.php template</h1>
+ <form action="index.php?page=tasks&action=edit" method="post">
+                <table>
+                    <tr>
+                        <th><label for="owneremail">Owner Email</label></th>
+                        <td><input type="text" id="owneremail" name="owneremail" value= "<?php echo $data->owneremail ?>"/></td>
+                    </tr>
+                    <tr>
+                        <th><label for="ownerid">Owner Id</label></th>
+                        <td><input type="text" id="ownerid" name="ownerid" value="<?php echo $data->ownerid ?>" /></td>    
+                    </tr>
+                    <tr>
+                        <th><label for="createddate">Date Created</label></th>
+                        <td><input type="text" id="createddate" name="createddate" value="<?php echo $data->createddate ?>" /></td>    
+                    </tr>
+                     <tr>
+                        <th><label for="duedate">Due Date</label></th>
+                        <td><input type="text" id="duedate" name="duedate" value="<?php echo $data->duedate ?>" /></td>    
+                    </tr>
+                    <tr>
+                        <th><label for="message">Message</label></th>
+                        <td><input type="text" id="message" name="message" value="<?php echo $data->message ?>" /></td>    
+                    </tr>
+                    <tr>
+                        <th><label for="isdone">Completed?</label></th>
+                        <td><input type="text" id="isdone" name="isdone" value="<?php echo $data->isdone ?>" /></td>    
+                    </tr>
+                </table>
+               
+                <input type="submit" value="Save" />
+</form>
 
 
 

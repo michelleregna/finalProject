@@ -91,7 +91,7 @@ class routes
         $route->action = 'edit';
         $route->page = 'tasks';
         $route->controller = 'tasksController';
-        $route->method = 'store';
+        $route->method = 'update';
         $routes[] = $route;
 
         // CREATE - SHOWS THE FORM
