@@ -17,7 +17,7 @@
 
 <body>
 
-<h1> Edit record <?php echo $data->id?> </h1>
+<h1> Edit task <?php echo $data->id?> </h1>
 
  <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="post">
                 <table>
