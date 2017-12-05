@@ -61,16 +61,18 @@ class tasksController extends http\controller
     public static function update() 
     {
         
-        print_r($_POST);
-        // // $record = new todo();
-        $record = todos::findOne($lastInsertedId);
-        echo $lastInsertedId;
-        // $record->owneremail = $_POST['owneremail'];
-        // $record->ownerid = $_POST['ownerid'];
-        // $record->createddate = $_POST['createddate'];
-        // $record->duedate = $_POST['duedate'];
-        // $record->message = $_POST['message'];
-        // $record->isdone = $_POST['isdone'];
+        // $lastInsertedId = todos::findOne($_POST['id']);
+        // echo $lastInsertedId;
+        $records = todos::findOne($_REQUEST['id']);
+        $record = new todo();
+        $record->id=$records->id;
+        $record->owneremail = $_POST['owneremail'];
+        $record->ownerid = $_POST['ownerid'];
+        $record->createddate = $_POST['createddate'];
+        $record->duedate = $_POST['duedate'];
+        $record->message = $_POST['message'];
+        $record->isdone = $_POST['isdone'];
+        $record->save();
         // $lastInsertedId=$record->save();
         // header('Location: index.php?page=tasks&action=all');
     }

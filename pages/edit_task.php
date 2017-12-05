@@ -19,7 +19,7 @@
 
 <h1> Edit record <?php echo $data->id?> </h1>
 
- <form action="index.php?page=tasks&action=edit" method="post">
+ <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="post">
                 <table>
                     <tr>
                         <th><label for="owneremail">Owner Email</label></th>
