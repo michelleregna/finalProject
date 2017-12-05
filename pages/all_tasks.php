@@ -19,18 +19,10 @@
 
 <?php
 //this is how you print something
-
 print utility\htmlTable::genarateTableFromMultiArray($data);
 
 ?>
 
-<!-- <button type="submit" value="Add task">Add Task</button>
- -->
-
-<!-- <form action="index.php" method="get">
-    <button type="submit" value="Add task">Add Task</button>
-</form>
- -->
 <form action="index.php" method="get">
     <input type="hidden" name ="page" value ="tasks"/>
     <input type="hidden" name = "action" value = "create"/>

@@ -173,8 +173,6 @@ class routes
         $routes[] = $route;
 
         return $routes;
-
-         //you need to add routes for create, edit, and delete
     }
 }
 
