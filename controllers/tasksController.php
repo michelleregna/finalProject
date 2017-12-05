@@ -34,7 +34,6 @@ class tasksController extends http\controller
     public static function create()
     {
         self::getTemplate('add_task');
-        // print_r($_POST);
     }
 
     //this is the function to view edit record form
@@ -51,9 +50,7 @@ class tasksController extends http\controller
     //this would be for the post for sending the task edit form
     public static function store()
     {
-        // echo "you are in the store function";
         print_r($_POST);
-        // $record = todos::findOne($_REQUEST['id']);
         $record = new todo();
         $record->owneremail = $_POST['owneremail'];
         $record->ownerid = $_POST['ownerid'];
@@ -61,11 +58,8 @@ class tasksController extends http\controller
         $record->duedate = $_POST['duedate'];
         $record->message = $_POST['message'];
         $record->isdone = $_POST['isdone'];
-        // $record->body = $_REQUEST['body'];
         $lastInsertedId=$record->save();
         header('Location: index.php?page=tasks&action=all');
-        
-
     }
 
     //this is the delete function.  You actually return the edit form and then there should be 2 forms on that.

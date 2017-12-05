@@ -26,10 +26,13 @@ print_r($data);
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
 
-<form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?> " method="get" id="form2">
-    <button type="submit" form="form2" value="edit">Edit</button>
-</form>
 
+<form action="index.php" method="get">
+    <input type="hidden" name ="page" value ="tasks"/>
+    <input type="hidden" name = "action" value = "edit"/>
+    <input type="hidden" name = "id" value = <?php echo "$data->id";?> />
+    <input type="submit" value="Edit">
+</form>
 
 
 
