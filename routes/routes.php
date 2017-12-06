@@ -172,9 +172,18 @@ class routes
         $route->method = 'store';
         $routes[] = $route;
 
-        // REGISTER - SHOWS THE FORM
+        // REGISTER ACCOUNT - SHOWS THE FORM
         $route = new route();
         $route->http_method = 'GET';
+        $route->action = 'register';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'register';
+        $routes[] = $route;
+
+        // REGISTER - STORES THE ACCOUNT
+        $route = new route();
+        $route->http_method = 'POST';
         $route->action = 'register';
         $route->page = 'accounts';
         $route->controller = 'accountsController';
