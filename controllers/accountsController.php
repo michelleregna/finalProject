@@ -44,19 +44,26 @@ class accountsController extends http\controller
     //this is the function to save the user the user profile
     public static function store()
     {
-        //$record = accounts::findOne($_REQUEST['id']);
-        print_r($_POST);
-        //this just shows creating an account.
-        $record = new account();
-        $record->email = "kwilliam@njit.edu";
-        $record->fname = "test2";
-        $record->lname = "cccc2";
-        $record->phone = "4444444";
-        $record->birthday = "0";
-        $record->gender = "male";
-        $record->password = "12345";
-        $record->save();
-
+        $user = accounts::findUserbyEmail($_REQUEST['email']);
+        
+        if ($user == FALSE) {
+            $user = new account();
+            $user->email = $_POST['email'];
+            $user->fname = $_POST['fname'];
+            $user->lname = $_POST['lname'];
+            $user->phone = $_POST['phone'];
+            $user->birthday = $_POST['birthday'];
+            $user->gender = $_POST['gender'];
+            //$user->password = $_POST['password'];
+            //this creates the password
+            //this is a mistake you can fix...
+            //Turn the set password function into a static method on a utility class.
+            $user->password = $user->setPassword($_POST['password']);
+            $user->save();
+            //you may want to send the person to a
+            // login page or create a session and log them in
+            // and then send them to the task list page and a link to create tasks
+            header("Location: index.php?page=accounts&action=all");
     }
 
     public static function edit()
