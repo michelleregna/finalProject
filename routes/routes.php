@@ -187,7 +187,7 @@ class routes
         $route->action = 'register';
         $route->page = 'accounts';
         $route->controller = 'accountsController';
-        $route->method = 'register';
+        $route->method = 'store';
         $routes[] = $route;
 
         return $routes;
