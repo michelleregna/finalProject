@@ -172,6 +172,15 @@ class routes
         $route->method = 'store';
         $routes[] = $route;
 
+        // REGISTER
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'register';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'register';
+        $routes[] = $route;
+
         return $routes;
     }
 }
