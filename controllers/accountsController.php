@@ -36,8 +36,15 @@ class accountsController extends http\controller
     //this is to register an account i.e. insert a new account
     public static function register()
     {
+        self::getTemplate('register');
         //https://www.sitepoint.com/why-you-should-use-bcrypt-to-hash-stored-passwords/
         //USE THE ABOVE TO SEE HOW TO USE Bcrypt
+    }
+
+    //this is the function to save the user the user profile
+    public static function store()
+    {
+        //$record = accounts::findOne($_REQUEST['id']);
         print_r($_POST);
         //this just shows creating an account.
         $record = new account();
@@ -49,13 +56,6 @@ class accountsController extends http\controller
         $record->gender = "male";
         $record->password = "12345";
         $record->save();
-    }
-
-    //this is the function to save the user the user profile
-    public static function store()
-    {
-        //$record = accounts::findOne($_REQUEST['id']);
-        print_r($_POST);
 
     }
 
