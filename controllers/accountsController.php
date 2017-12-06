@@ -60,10 +60,19 @@ class accountsController extends http\controller
             //Turn the set password function into a static method on a utility class.
             $user->password = $user->setPassword($_POST['password']);
             $user->save();
+            header("Location: index.php?page=accounts&action=all");
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=all");
+            
+        } else {
+                //You can make a template for errors called error.php
+                // and load the template here with the error you want to show.
+               // echo 'already registered';
+                $error = 'already registered';
+                self::getTemplate('error', $error);
+        }
+
     }
 
     public static function edit()
