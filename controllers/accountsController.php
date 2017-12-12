@@ -102,7 +102,21 @@ class accountsController extends http\controller
         //after you login you can use the header function to forward the user to a page that displays their tasks.
         //        $record = accounts::findUser($_POST['uname']);
 
-        print_r($_POST);
+        $user = accounts::findUserbyEmail($_REQUEST['email']);
+        
+        if ($user == FALSE) {
+            echo 'user not found';
+        } else {
+            if($user->checkPassword($_POST['password']) == TRUE) {
+                echo 'login';
+                session_start();
+                $_SESSION["userID"] = $user->id;
+                //forward the user to the show all todos page
+                print_r($_SESSION);
+            } else {
+                echo 'password does not match';
+            }
+        }
 
     }
 
