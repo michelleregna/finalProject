@@ -60,7 +60,7 @@ class accountsController extends http\controller
             //Turn the set password function into a static method on a utility class.
             $user->password = $user->setPassword($_POST['password']);
             $user->save();
-            header("Location: index.php?page=tasks&action=all");
+            header("Location: index.php");
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
@@ -121,7 +121,7 @@ class accountsController extends http\controller
     public static function logout() 
     {   session_start();
         unset($_SESSION["userID"]);
-        header('Location: index.php?');
+        header('Location: index.php');
 
 
     }
