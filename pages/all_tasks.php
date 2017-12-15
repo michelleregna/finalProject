@@ -21,7 +21,12 @@
 
 <?php
 //this is how you print something
-print utility\htmlTable::genarateTableFromMultiArray($data);
+if($data == false) {
+    echo 'There are currently no tasks';
+} else {
+    print utility\htmlTable::genarateTableFromMultiArray($data);
+}
+
 
 ?>
 

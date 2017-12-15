@@ -9,12 +9,12 @@ class todos extends database\collection
     public static function findTasksByID($userid) 
     {
 		$tableName = get_called_class();
-		$sql = 'SELECT * FROM ' . $tableName . ' WHERE ownerid ="' . $userid .'"';
+		$sql = 'SELECT id,owneremail,createddate,duedate,message,isdone FROM ' . $tableName . ' WHERE ownerid = ?';
 		$recordsSet = self::getResults($sql, $userid);
-		if (is_null($recordSet)) {
+		if (is_null($recordsSet)) {
 			return FALSE;
 		} else {
-			return $recordSet;
+			return $recordsSet;
 		}
 
     }
