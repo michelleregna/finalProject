@@ -15,7 +15,7 @@ class todos extends database\collection
 			return FALSE;
 		} else {
 			foreach($recordsSet as $record) {
-				unset($record['ownerid']);
+				unset($record->ownerid);
 			}
 			return $recordsSet;
 		}

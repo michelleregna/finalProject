@@ -18,48 +18,16 @@
 <body>
 
  <form action="index.php?page=tasks&action=create" method="post">
-                <table>
-                    <tr>
-                        <th><label for="owneremail">Owner Email</label></th>
-                        <td><input type="text" id="owneremail" name="owneremail" value="" /></td>
-                    </tr>
-                    <tr>
-                    	<th><label for="ownerid">Owner Id</label></th>
-                        <td><input type="text" id="ownerid" name="ownerid" value="" /></td>    
-                    </tr>
-                    <tr>
-                    	<th><label for="createddate">Date Created</label></th>
-                        <td><input type="text" id="createddate" name="createddate" value="" /></td>    
-                    </tr>
-                     <tr>
-                    	<th><label for="duedate">Due Date</label></th>
-                        <td><input type="text" id="duedate" name="duedate" value="" /></td>    
-                    </tr>
-                    <tr>
-                    	<th><label for="message">Message</label></th>
-                        <td><input type="text" id="message" name="message" value="" /></td>    
-                    </tr>
-                    <tr>
-                    	<th><label for="isdone">Completed?</label></th>
-                        <td><input type="text" id="isdone" name="isdone" value="" /></td>    
-                    </tr>
-                </table>
-               
-                <input type="submit" value="Submit" />
+                
+                 
+Owner Email: <input type="text" name="owneremail"><br>
+Owner Id: <input type="text" name="ownerid"><br>
+Due Date: <input type="text" name="duedate"><br> 
+Message: <input type="text" name="message"><br> 
+Completed?: <input type="text" name="isdone"><br> 
+                 
+<input type="submit" value="Submit" />
 </form>
-
-<!-- <?php
-//this is how you print something
-
-// print utility\htmlTable::genarateTableFromMultiArray($data);
-
-?> -->
-
-<!-- <form action="index.php?page=tasks&action=create" method="get">
-    <button type="submit" value="Add task">Add Task</button>
-</form> -->
-<!-- <a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>'
- -->
 
 <script src="js/scripts.js"></script>
 </body>
