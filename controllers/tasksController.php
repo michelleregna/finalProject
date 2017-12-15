@@ -29,9 +29,12 @@ class tasksController extends http\controller
     public static function store()
     {
         $record = new todo();
+        session_start();
+        date_default_timezone_set('America/New_York');
+
         $record->owneremail = $_POST['owneremail'];
-        $record->ownerid = $_POST['ownerid'];
-        $record->createddate = $_POST['createddate'];
+        $record->ownerid = $_SESSION['userid'];
+        $record->createddate = date('F j, Y, g:i a');
         $record->duedate = $_POST['duedate'];
         $record->message = $_POST['message'];
         $record->isdone = $_POST['isdone'];

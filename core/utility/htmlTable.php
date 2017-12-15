@@ -51,7 +51,7 @@ class htmlTable
             $tableGen .= '<td>' . $value . '</td>';
         }
 
-        $tableGen .= '</tr></table><hr>';
+        $tableGen .= '</tr></table>';
         return $tableGen;
     }
 }
