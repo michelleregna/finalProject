@@ -118,4 +118,12 @@ class accountsController extends http\controller
 
     }
 
+    public static function logout() 
+    {   session_start();
+        unset($_SESSION["userID"]);
+        header('Location: index.php?');
+
+
+    }
+
 }
