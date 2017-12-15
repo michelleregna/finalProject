@@ -60,7 +60,7 @@ class accountsController extends http\controller
             //Turn the set password function into a static method on a utility class.
             $user->password = $user->setPassword($_POST['password']);
             $user->save();
-            header("Location: index.php?page=accounts&action=all");
+            header("Location: index.php?page=tasks&action=all");
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
@@ -102,7 +102,7 @@ class accountsController extends http\controller
         //after you login you can use the header function to forward the user to a page that displays their tasks.
         //        $record = accounts::findUser($_POST['uname']);
 
-         $user = accounts::findUserbyEmail($_REQUEST['uname']);
+        $user = accounts::findUserbyEmail($_REQUEST['uname']);
         if ($user == FALSE) {
             echo 'user not found';
         } else {
@@ -110,8 +110,7 @@ class accountsController extends http\controller
                 echo 'login';
                 session_start();
                 $_SESSION["userID"] = $user->id;
-                //forward the user to the show all todos page
-                print_r($_SESSION);
+                header("Location: index.php?page=tasks&action=all");
             } else {
                 echo 'password does not match';
             }
