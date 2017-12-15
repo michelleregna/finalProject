@@ -12,3 +12,5 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+  <main role="main" class="container">
+	<div class="starter-template">
