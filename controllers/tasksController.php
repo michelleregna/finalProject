@@ -33,25 +33,17 @@ class tasksController extends http\controller
     {
         $record = new todo();
         session_start();
+        date_default_timezone_set('America/New York');
         $record->owneremail = $_POST['owneremail'];
         $record->ownerid = $_SESSION['userID'];
-        $record->createddate = date_default_timezone_set('America/New_York');
+        $record->createddate = date("Y/m/d H:i:s");
         $record->duedate = $_POST['duedate'];
         $record->message = $_POST['message'];
         $record->isdone = $_POST['isdone'];
         $record->save();
 
-        // session_start();
-        // date_default_timezone_set('America/New_York');
-
-        // $record->owneremail = $_POST['owneremail'];
-        // $record->ownerid = $_SESSION['userid'];
-        // $record->createddate = date('F j, Y, g:i a');
-        // $record->duedate = $_POST['duedate'];
-        // $record->message = $_POST['message'];
-        // $record->isdone = $_POST['isdone'];
         // $lastInsertedId=$record->save();
-        // header('Location: index.php?page=tasks&action=all');
+        header('Location: index.php?page=tasks&action=all');
     }
 
     public static function update() 
