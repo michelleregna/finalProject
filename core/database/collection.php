@@ -39,12 +39,15 @@ abstract class collection
     static public function findOne($id)
     {
         $tableName = get_called_class();
-        $sql = 'SELECT * FROM ' . $tableName . ' WHERE id = ?';
+        $sql = 'SELECT id,owneremail,createddate,duedate,message,isdone FROM ' . $tableName . ' WHERE id = ?';
         //grab the only record for find one and return as an object
         $recordsSet = self::getResults($sql, $id);
         if (is_null($recordsSet)) {
             return FALSE;
         } else {
+            foreach($recordsSet as $record) {
+                unset($record->ownerid);
+            }
             return $recordsSet[0];
         }
     }
