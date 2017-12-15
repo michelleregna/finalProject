@@ -8,7 +8,8 @@ class htmlTable
     public static function genarateTableFromMultiArray($array)
     {
 
-        $tableGen = '<table border="1"cellpadding="10">';
+        $tableGen = '<table class="table table-bordered table-hover">';
+        $tableGen .= '<thead class="thead-dark"';
         $tableGen .= '<tr>';
         //this grabs the first element of the array so we can extract the field headings for the table
         $fieldHeadings = $array[0];
@@ -20,7 +21,9 @@ class htmlTable
             $tableGen .= '<th>' . $heading . '</th>';
         }
         $tableGen .= '</tr>';
+        $tableGen .= '</thead>';
         foreach ($array as $record) {
+            $tableGen .= '<tbody>';
             $tableGen .= '<tr>';
             foreach ($record as $key => $value) {
                 if ($key == 'id') {
@@ -29,6 +32,7 @@ class htmlTable
                     $tableGen .= '<td>' . $value . '</td>';
                 }
             }
+            $tableGen .= '</tbody>';
             $tableGen .= '</tr>';
         }
 
@@ -39,13 +43,15 @@ class htmlTable
 
     public static function generateTableFromOneRecord($innerArray)
     {
-        $tableGen = '<table border="1" cellpadding="10"><tr>';
+        $tableGen = '<table class="table table-bordered">';
+        $tableGen .= '<thead class="thead-dark"';
 
         $tableGen .= '<tr>';
         foreach ($innerArray as $innerRow => $value) {
             $tableGen .= '<th>' . $innerRow . '</th>';
         }
         $tableGen .= '</tr>';
+        $tableGen .= '</thead>';
 
         foreach ($innerArray as $value) {
             $tableGen .= '<td>' . $value . '</td>';
