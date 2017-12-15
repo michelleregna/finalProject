@@ -19,7 +19,7 @@
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationDefault02">Last name</label>
-      <input type="text" name= "lname" class="form-control" id="validationDefault02" placeholder="Last name" required>
+      <input type="text" name="lname" class="form-control" id="validationDefault02" placeholder="Last name" required>
     </div>
   </div>
   <div class="row">
@@ -40,7 +40,7 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationDefault06">Gender</label>
-      <input type="text" name="birthday" class="form-control" id="validationDefault06" placeholder="Gender" required>
+      <input type="text" name="gender" class="form-control" id="validationDefault06" placeholder="Gender" required>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationDefault07">Password</label>
