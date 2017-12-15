@@ -3,8 +3,6 @@ include 'header.php';
 include 'nav.php';
 ?>
 
-<h1> Edit task <?php echo $data->id?> </h1>
-
 <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="post">
                                
     Owner Email: <input type="text" name="owneremail" value= "<?php echo $data->owneremail ?>"/><br>
