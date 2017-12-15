@@ -35,7 +35,7 @@ class tasksController extends http\controller
         session_start();
         $record->owneremail = $_POST['owneremail'];
         $record->ownerid = $_SESSION['userID'];
-        $record->createddate = date('F j, Y, g:i a');
+        $record->createddate = date_default_timezone_set('America/New_York');
         $record->duedate = $_POST['duedate'];
         $record->message = $_POST['message'];
         $record->isdone = $_POST['isdone'];
