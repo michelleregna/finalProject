@@ -19,35 +19,14 @@
 
 <h1> Edit task <?php echo $data->id?> </h1>
 
- <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="post">
-                <table>
-                    <tr>
-                        <th><label for="owneremail">Owner Email</label></th>
-                        <td><input type="text" id="owneremail" name="owneremail" value= "<?php echo $data->owneremail ?>"/></td>
-                    </tr>
-                    <tr>
-                        <th><label for="ownerid">Owner Id</label></th>
-                        <td><input type="text" id="ownerid" name="ownerid" value="<?php echo $data->ownerid ?>" /></td>    
-                    </tr>
-                    <tr>
-                        <th><label for="createddate">Date Created</label></th>
-                        <td><input type="text" id="createddate" name="createddate" value="<?php echo $data->createddate ?>" /></td>    
-                    </tr>
-                     <tr>
-                        <th><label for="duedate">Due Date</label></th>
-                        <td><input type="text" id="duedate" name="duedate" value="<?php echo $data->duedate ?>" /></td>    
-                    </tr>
-                    <tr>
-                        <th><label for="message">Message</label></th>
-                        <td><input type="text" id="message" name="message" value="<?php echo $data->message ?>" /></td>    
-                    </tr>
-                    <tr>
-                        <th><label for="isdone">Completed?</label></th>
-                        <td><input type="text" id="isdone" name="isdone" value="<?php echo $data->isdone ?>" /></td>    
-                    </tr>
-                </table>
-               
-                <input type="submit" value="Save" />
+<form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="post">
+                               
+    Owner Email: <input type="text" name="owneremail" value= "<?php echo $data->owneremail ?>"/><br>
+    Due Date: <input type="text" name="duedate" value="<?php echo $data->duedate ?>"><br> 
+    Message: <input type="text" name="message" value="<?php echo $data->message ?>"><br> 
+    Completed?: <input type="text" name="isdone" value="<?php echo $data->isdone ?>"><br> 
+                     
+    <input type="submit" value="Submit" />
 </form>
 
 
