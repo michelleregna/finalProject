@@ -3,17 +3,7 @@ include 'header.php';
 include 'nav.php';
 ?>
 
-
-<!--  <form action="index.php?page=tasks&action=create" method="post">
-                               
-    Owner Email: <input type="text" name="owneremail"><br>
-    Due Date: <input type="text" name="duedate"><br> 
-    Message: <input type="text" name="message"><br> 
-    Completed?: <input type="text" name="isdone"><br> 
-                     
-    <input type="submit" value="Submit" />
-</form> -->
-
+<h1>Add Task</h1>
  <form action="index.php?page=tasks&action=create" method="post">
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Owner Email</label>

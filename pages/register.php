@@ -10,6 +10,7 @@
     Password: <input type="password" name="password"><br>
     <input type="submit" value="Submit">
 </form> -->
+<h1>Register</h1>
 
 <form action="index.php?page=accounts&action=register" method="post">
   <div class="row">
