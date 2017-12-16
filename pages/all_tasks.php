@@ -8,7 +8,7 @@ include 'nav.php';
 <?php
 //this is how you print something
 if($data == false) {
-    echo 'There are currently no tasks';
+    echo 'You currently have no tasks!';
 } else {
     print utility\htmlTable::genarateTableFromMultiArray($data);
 }
