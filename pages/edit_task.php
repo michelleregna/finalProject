@@ -29,7 +29,7 @@ include 'nav.php';
       <input type="text" name="isdone" class="form-control" id="inputPEmail3" value="<?php echo $data->isdone ?>">
     </div>
   </div>
-  <div class="form-group row">
+   <div class="form-group row">
     <div class="col-sm-10">
       <button type="submit" class="btn btn-primary">Save</button>
     </div>

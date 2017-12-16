@@ -26,12 +26,12 @@ include 'nav.php';
    <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Completed?</label>
     <div class="col-sm-10">
-      <input type="text" name="isdone" class="form-control" id="inputPEmail3" placeholder="Yes/No">
+      <input type="text" name="isdone" class="form-control" id="inputPEmail3" placeholder="0 or 1">
     </div>
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Add Task</button>
+      <button type="submit" class="btn btn-primary">Save</button>
     </div>
   </div>
 </form>

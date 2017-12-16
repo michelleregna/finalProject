@@ -31,21 +31,21 @@
         Please provide a valid email.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
+      <div class="col-md-6 mb-3">
+      <label for="validationDefault07">Password</label>
+      <input type="password" name="password" class="form-control" id="validationDefault07" placeholder="Password" required>
+    </div>
+    <div class="col-md-4 mb-3">
       <label for="validationDefault04">Phone Number</label>
       <input type="text" name="phone" class="form-control" id="validationDefault04" placeholder="555-555-5555" required>
     </div>
-    <div class="col-md-3 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationDefault05">Birthday</label>
       <input type="text" name="birthday" class="form-control" id="validationDefault05" placeholder="YYYY/D/M" required>
     </div>
-    <div class="col-md-3 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationDefault06">Gender</label>
       <input type="text" name="gender" class="form-control" id="validationDefault06" placeholder="Gender" required>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationDefault07">Password</label>
-      <input type="password" name="password" class="form-control" id="validationDefault07" placeholder="Password" required>
     </div>
   </div>
 

@@ -19,7 +19,11 @@ if($data == false) {
 <form action="index.php" method="get">
     <input type="hidden" name ="page" value ="tasks"/>
     <input type="hidden" name = "action" value = "create"/>
-    <input type="submit" value="Add task">
+    <button class="btn btn-primary" type="submit">Add task</button>
 </form>
+
+
+
+
 
 <?php include 'footer.php';?>
