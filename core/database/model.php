@@ -13,7 +13,6 @@ abstract class model
 
         if ($this->id != '') {
             $sql = $this->update();
-            // $INSERT = FALSE;
         } else {
             $sql = $this->insert();
             $INSERT = TRUE;

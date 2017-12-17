@@ -6,7 +6,6 @@ include 'nav.php';
 <h1>All Tasks</h1>
 
 <?php
-//this is how you print something
 if($data == false) {
     echo 'You currently have no tasks!';
 } else {
@@ -21,9 +20,6 @@ if($data == false) {
     <input type="hidden" name = "action" value = "create"/>
     <button class="btn btn-primary" type="submit">Add task</button>
 </form>
-
-
-
 
 
 <?php include 'footer.php';?>

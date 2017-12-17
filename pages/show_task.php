@@ -6,7 +6,6 @@ include 'nav.php';
 <h1>View Task</h1>
 
 <?php
-//this is how you print something  $data contains the record that was selected on the table.
 print utility\htmlTable::generateTableFromOneRecord($data);
 
 ?>

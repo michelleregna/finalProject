@@ -1,7 +1,6 @@
 <?php
 
 namespace utility;
-//namespace MyProject\mvcName;
 
 class htmlTable
 {
