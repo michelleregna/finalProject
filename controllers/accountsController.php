@@ -91,12 +91,12 @@ class accountsController extends http\controller
 
     }
 
-    //this is to login, here is where you find the account and allow login or deny.
     public static function login()
     {
         $user = accounts::findUserbyEmail($_REQUEST['uname']);
         if ($user == FALSE) {
-            echo 'user not found';
+            $error = 'user not found';
+            self::getTemplate('error', $error);
         } else {
             if($user->checkPassword($_POST['psw']) == TRUE) {
                 echo 'login';
@@ -104,7 +104,8 @@ class accountsController extends http\controller
                 $_SESSION["userID"] = $user->id;
                 header("Location: index.php?page=tasks&action=all");
             } else {
-                echo 'password does not match';
+                $error = 'password does not match';
+                self::getTemplate('error', $error);
             }
         }
 
